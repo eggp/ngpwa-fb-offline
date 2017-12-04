@@ -12,6 +12,9 @@
         "/*.bundle.css",
         "/*.bundle.js",
         "/*.chunk.js"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/**"
       ]
     }
   }, {

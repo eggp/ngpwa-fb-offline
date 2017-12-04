@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body {
+  //display: flex;
+  //flex-direction: column;
+  //
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wid100 {
+  width: 100%;
+}
+
+/* fix: flex-layout add margin ... */
+router-outlet {
+  margin: 0 !important;
+}
+
+body::-webkit-scrollbar, md-sidenav.menu::-webkit-scrollbar, .mat-sidenav-content > #sidenav-content::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track, md-sidenav.menu::-webkit-scrollbar-trac, .mat-sidenav-content > #sidenav-content::-webkit-scrollbar-trac {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb, md-sidenav.menu::-webkit-scrollbar-thumb, .mat-sidenav-content > #sidenav-content::-webkit-scrollbar-thumb {
+  background-color: #b1bfcc;
+  outline: 1px solid #B1BFCC;
+}
+
+.spinner-wrapper {
+  padding: 1em;
+
+  h4 {
+    text-align: center;
+    min-width: 200px;
+    max-width: 400px;
+    width: 100%;
+  }
+}
