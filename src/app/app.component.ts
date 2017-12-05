@@ -1,6 +1,7 @@
 import {Component, NgZone, OnInit} from '@angular/core';
 import {environment} from '../environments/environment';
 import * as firebase from 'firebase';
+import {AppUpdateService} from './app-update.service';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,10 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  constructor(private ngZone: NgZone) {
-
+  constructor(private ngZone: NgZone, private appUpdateService: AppUpdateService) {
+    if (environment.production && this.appUpdateService != null) {
+      this.appUpdateService.initUpdateWatcher();
+    }
   }
 
   ngOnInit(): void {
