@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ngpwa-f7127"
+    "default": "ngpwa1",
+    "ngpwasimple": "ngpwa1"
   }
 }

@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDhvesEjMGZkuvmOQiEinYZquv0nmVLhXo',
-    authDomain: 'ngpwa-f7127.firebaseapp.com',
-    databaseURL: 'https://ngpwa-f7127.firebaseio.com',
-    projectId: 'ngpwa-f7127',
-    storageBucket: 'ngpwa-f7127.appspot.com',
-    messagingSenderId: '899512844261'
+    apiKey: 'AIzaSyCC52-s_opqh1c3PoL3fgEfAnSiZHms2D4',
+    authDomain: 'ngpwa1.firebaseapp.com',
+    databaseURL: 'https://ngpwa1.firebaseio.com',
+    projectId: 'ngpwa1',
+    storageBucket: 'ngpwa1.appspot.com',
+    messagingSenderId: '527782476668'
   }
 };
