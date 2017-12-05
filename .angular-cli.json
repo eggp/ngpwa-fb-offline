@@ -19,6 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/material-design-icons/iconfont/material-icons.css",
+        "../node_modules/roboto-fontface/css/roboto/sass/roboto-fontface.scss",
         "styles.scss"
       ],
       "scripts": [

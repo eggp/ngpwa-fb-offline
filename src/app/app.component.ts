@@ -1,4 +1,4 @@
-import {Component, NgZone, OnInit} from '@angular/core';
+import {AfterViewInit, Component, NgZone} from '@angular/core';
 import {environment} from '../environments/environment';
 import * as firebase from 'firebase';
 import {AppUpdateService} from './app-update.service';
@@ -8,7 +8,7 @@ import {AppUpdateService} from './app-update.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
   menu: { name: string, path: string }[] = [
     {
       name: 'chat',
@@ -22,9 +22,10 @@ export class AppComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.ngZone.runOutsideAngular(
       () => firebase.initializeApp(environment.firebase)
     );
   }
+
 }
