@@ -1,0 +1,39 @@
+:host(.saving) {
+  mat-list-item {
+    background-color: rgba(200, 200, 200, .5);
+  }
+}
+
+:host {
+  display: block;
+
+  mat-list-item {
+    height: inherit !important;
+    transition: background-color 0.5s ease-out;
+  }
+
+  .row {
+    position: relative;
+
+    p {
+      white-space: normal;
+      margin-top: 1em;
+    }
+
+    small {
+      font-size: 10px !important;
+      color: #828282;
+
+      position: absolute;
+      top: 0;
+
+      &.user {
+        left: 0;
+      }
+
+      &.time {
+        right: 0;
+      }
+    }
+  }
+}

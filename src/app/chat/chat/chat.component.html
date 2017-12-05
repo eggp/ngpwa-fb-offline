@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="center stretch" fxFill>
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" fxFill>
+    <app-form (newMsg)="saveMsg($event)"></app-form>
+    <ng-container *ngIf="msgList$ | async as msgList">
+      <ng-container *ngIf="msgList.length > 0;else loading">
+        <app-message-list [msgList]="msgList"></app-message-list>
+      </ng-container>
+      <ng-template #loading>
+        <app-loading></app-loading>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>
+

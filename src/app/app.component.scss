@@ -1,0 +1,23 @@
+:host {
+  height: 100%;
+  display: block;
+}
+
+mat-sidenav-container {
+  min-height: 100%;
+
+  mat-sidenav {
+    width: 320px;
+  }
+
+  #sidenav-content {
+    padding: 1em;
+    overflow: auto;
+    height: 100%;
+    max-height: calc(100vh - 64px);
+  }
+}
+
+.close {
+  margin-top: 1em;
+}

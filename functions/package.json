@@ -1,0 +1,24 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "~5.4.2",
+    "firebase-functions": "^0.7.1",
+    "moment": "^2.19.3"
+  },
+  "private": true,
+  "devDependencies": {
+    "ts-loader": "^3.2.0",
+    "webpack": "^3.9.1",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

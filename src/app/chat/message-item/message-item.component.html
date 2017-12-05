@@ -1,0 +1,8 @@
+<mat-list-item>
+  <div class="row" mat-line>
+    <small class="user">{{msg.createdUser}}</small>
+    <small class="time">{{msg.created}}</small>
+    <p>{{msg.msg}}</p>
+  </div>
+</mat-list-item>
+<mat-divider *ngIf="!last"></mat-divider>

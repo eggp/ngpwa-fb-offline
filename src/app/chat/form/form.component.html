@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Üzenet</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="saveMsg()">
+      <mat-form-field class="wid100" floatPlaceholder="auto">
+        <input matInput placeholder="írj üzenetet a többieknek" formControlName="msg" [errorStateMatcher]="matcher"
+               autocomplete="off">
+        <button mat-button aria-label="Üzenet küldése" type="submit" matSuffix role="button">
+          <mat-icon>send</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>

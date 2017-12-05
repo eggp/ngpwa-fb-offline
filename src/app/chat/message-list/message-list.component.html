@@ -1,0 +1,5 @@
+<mat-list fxFill fxFlex="100">
+  <h3 mat-subheader>üzenetek</h3>
+  <app-message-item [@fadeIn]="''" *ngFor="let msg of msgList;let last = last;trackBy:trackByFn" [msg]="msg"
+                    [last]="last"></app-message-item>
+</mat-list>
