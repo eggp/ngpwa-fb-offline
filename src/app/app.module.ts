@@ -20,8 +20,8 @@ import {
 } from '@angular/material';
 import {isPlatformBrowser} from '@angular/common';
 import {AppUpdateService} from './app-update.service';
-import {Route404Component} from './route404/route404.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {Route404Component} from './route404/route404.component';
 
 export class OptionalSwUpdate {
   constructor(@Optional() public swUpdate: SwUpdate) {
@@ -42,7 +42,7 @@ export const appUpdateServiceFactory = (_PLATFORM_ID: string, optionalSwUpdate: 
     Route404Component
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'pwa-test'}),
     BrowserAnimationsModule,
     AppRoutingModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
